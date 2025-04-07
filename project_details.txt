@@ -1,0 +1,105 @@
+National College of Ireland
+
+MSCCLOUD1JAN24I A
+MSCCLOUD1JAN24I B
+Weighting 50% Project 
+To Be Completed as Individual
+Release: Week of 26th of Feb
+Submission: Week of 15th of April
+
+______________________________________________________________________
+
+Blockchain Concepts and Technologies
+5 Credits
+Academic Honesty Declaration
+I declare the following to be true for this submission:
+•	I have completed the task during the designated time window and declare it to be exclusively my own work.
+•	I have not received, or attempted to receive assistance in preparing this response from any other person during the assessment window.
+•	I have not provided, or offered to provide, assistance to any other student by any means during the assessment window.
+•	I have read and understand the National College of Ireland guidelines of Plagiarism.
+•	This Front-Page declaration is to be included within your submission 
+Additional Guidelines
+•	IEEE is not expected for this assessment, standard word or PDF format can be used for submission.
+•	Font Size 11 is recommended with Word Length specified within.
+•	Any Online material included within this assessment should be cited and referenced using the Harvard referencing style
+•	The Use of any AI supportive tools is forbidden 
+Creation of a Decentralized, web3 enabled application
+
+
+Overview  
+For This Assignment you must develop a Web3 Enabled, decentralized application.
+The application will require a login functionality (Web3) and must have at least 3 elements of Functionality. 
+
+The Student must work to ensure the Application is working as designed with no errors in functionality and/or operation. 
+
+Examples of Functionality include: 
+	The use of Web3 wallet for Login functionality 
+	The connection of the Application with an underlying deployed Smart Contract  
+	The Sending and receiving of funds, the function of which is available through the application
+	The use of external or third-party APIs for Function and Design of the Application
+Additional Functionality is expected to be implemented by the student furthering the above functions. 
+
+
+The application should be visually designed to be suitable for the below assigned domain :
+
+•	Student Number: 1-2 : Finance
+•	Student Number: 3-4 : Retail 
+•	Student Number : 5-6 : Marketing
+•	Student Number : 7-8 : Sports
+•	Student Number : 9-0 : Health 
+
+
+
+1.	 Students are required to develop a Decentralized application which is considered as a Web3 enabled Application
+
+2.	The Application must communicate with an underlying smart contract deployed on the Sepolia	 test network or suitable Ethereum Test Network 
+
+3.	The Application must have a front end in which the user can interact with the application and therefore the underlying smart contract. 
+
+4.	The application must have functionality as dictated above. 
+
+5.	The application can be cloud hosted or delivered locally. 
+
+6.	Additional Points awarded for Cloud Deployment of the application; points awarded shown in rubric below. 
+
+7.	The Application must have a login functionality through the use of Web3 login with Metamask. 
+
+ 
+Your Decentralized Application must be accompanied by a brief report and presentation 
+
+The report must be no longer than 6 pages, including the DApp report and a separate 1 page report on the use of smart contracts in industry with examples of the state of the art.  
+
+The presentation must be max 7 mins and cover the key areas of functionality of the application, you must show the applications features and functionality. 
+
+Your report must include an original architectural diagram of your own design which shows components of the application and the overall relationship between the tools and components used.
+Examples of Architectural Diagrams are found on your moodle page.   
+
+Justification for the design and functionality of the DApp must be given and explained within the report. 
+
+Basic Example of Architectural Diagram Below
+  
+Marks	Output
+5%  	Setting up Ethereum account and corresponding Wallet Account
+5%  	Deploying verified smart contract Test Net
+15%  
+ 	Providing functional Node.JS application to handle user interactions and support communication with underlying Smart Contract. 
+10%  
+ 	Deployment of the Application to a suitable public cloud infrastructure & Deployment of Smart Contract to Ethereum Test Network.  
+10%  	 The Use of 3rd Party Tools, services or APis 
+25%  
+ 	Providing 4-page report on process of operations of the application and contract interactions.
+  
+•	Introduction explaining the tools being used and their purpose. 
+•	Document the Setup and configuration of said tools. 
+•	Describe the process of operations between each of the components at use throughout the project  
+•	Provide an Architectural Diagram
+•	Bibliography/References
+20%  	Providing 1-page report on the Use and Purpose of Smart Contracts. 
+Provide at least 2 examples of state of the art in the domain. 
+Provide your thoughts and insight into the impact of the ability to create tokens, NFTs and Smart Contract Enabled applications in this manner, including any ethical or social concerns. 
+10% 	5-7 Min Pre-recorded Demonstration displaying the operation of the Application.
+You are to give an overview of the functions and operations of the application with specific emphasis on implemented functionality and design.  
+
+NCI policies on plagiarism apply. 
+Papers will be submitted through Turnitin with similarity scores provided to establish originality of respective works  
+
