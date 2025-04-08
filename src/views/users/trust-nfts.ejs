@@ -1,0 +1,118 @@
+<%- include('../partials/header') %>
+
+<div class="row">
+    <div class="col-lg-10 mx-auto">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-transparent">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Your Trust NFT Collection</h5>
+                    <span class="badge bg-primary">Total: <%= nfts.length %></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info mb-4">
+                    <p class="mb-0">
+                        <strong>How Trust NFTs Work:</strong> Each time you successfully return a rented item on time, you earn a Trust NFT. 
+                        These NFTs represent your reliability as a renter and unlock access to premium items.
+                    </p>
+                </div>
+                
+                <% if(nfts.length > 0) { %>
+                    <div class="row">
+                        <% nfts.forEach(function(nft) { %>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h6 class="mb-0">Trust NFT Level <%= nft.level %></h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center mb-3">
+                                            <div class="bg-light rounded-circle mx-auto d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
+                                                <span class="display-4 text-primary">
+                                                    <%= nft.level %>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <p class="mb-1"><strong>Token ID:</strong> #<%= nft.id %></p>
+                                            <p class="mb-1"><strong>Earned From:</strong> <%= nft.earnedFrom %></p>
+                                            <p class="mb-0"><strong>Date Earned:</strong> <%= nft.earnedDate %></p>
+                                        </div>
+                                        
+                                        <div class="alert alert-success mb-0">
+                                            <small>This NFT allows you to rent items requiring Level <%= nft.level %> trust or lower.</small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <button class="btn btn-sm btn-outline-primary w-100" onclick="viewOnBlockchain('<%= nft.id %>')">
+                                            View on Blockchain
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                <% } else { %>
+                    <div class="alert alert-warning">
+                        <p class="mb-0">You don't have any Trust NFTs yet. Rent and return items on time to earn Trust NFTs.</p>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="/items" class="btn btn-primary">Browse Items to Rent</a>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        
+        <div class="card shadow-sm">
+            <div class="card-header bg-transparent">
+                <h5 class="mb-0">Trust Level Benefits</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Trust Level</th>
+                                <th>Items You Can Rent</th>
+                                <th>Benefits</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Level 0</td>
+                                <td>Basketball</td>
+                                <td>Basic rental access</td>
+                            </tr>
+                            <tr>
+                                <td>Level 1</td>
+                                <td>Basketball, Laptop Charger</td>
+                                <td>Reduced deposit requirements</td>
+                            </tr>
+                            <tr>
+                                <td>Level 2</td>
+                                <td>Basketball, Laptop Charger, DSLR Camera</td>
+                                <td>Access to premium items</td>
+                            </tr>
+                            <tr>
+                                <td>Level 3</td>
+                                <td>All items including Gaming Console</td>
+                                <td>No deposit required for any item</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function viewOnBlockchain(tokenId) {
+        // This would normally link to Etherscan or similar to view the NFT
+        // For now, just show an alert
+        alert(`This would show Trust NFT #${tokenId} on the Sepolia blockchain explorer.`);
+    }
+</script>
+
+<%- include('../partials/footer') %>

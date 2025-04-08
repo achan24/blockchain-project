@@ -1,0 +1,223 @@
+<%- include('../partials/header') %>
+
+<div class="row">
+    <div class="col-lg-10 mx-auto">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Your Wallet</h5>
+                        <p class="card-text text-muted small mb-2">Connected Address</p>
+                        <p class="card-text font-monospace"><%= user.address %></p>
+                        <hr>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="me-3 text-center">
+                                <h3 class="mb-0 text-primary"><%= user.trustNFTs %></h3>
+                                <small class="text-muted">Trust NFTs</small>
+                            </div>
+                            <div class="vr mx-3"></div>
+                            <div class="text-center">
+                                <h3 class="mb-0 text-primary"><%= user.rentals.length %></h3>
+                                <small class="text-muted">Total Rentals</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="/users/trust-nfts" class="btn btn-outline-primary btn-sm w-100">View Trust NFTs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Items You Can Rent</h5>
+                        <p class="text-muted mb-3">Based on your Trust NFTs (<%= user.trustNFTs %>), you can rent the following items:</p>
+                        
+                        <div class="row">
+                            <% if(user.trustNFTs >= 0) { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-primary">0 NFTs</span>
+                                            </div>
+                                            <h6 class="card-title">Basketball</h6>
+                                            <a href="/items/0" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                            
+                            <% if(user.trustNFTs >= 1) { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-primary">1 NFT</span>
+                                            </div>
+                                            <h6 class="card-title">Laptop Charger</h6>
+                                            <a href="/items/1" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } else { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-secondary bg-light">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">1 NFT</span>
+                                            </div>
+                                            <h6 class="card-title text-muted">Laptop Charger</h6>
+                                            <p class="card-text small text-muted">Locked</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                            
+                            <% if(user.trustNFTs >= 2) { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-primary">2 NFTs</span>
+                                            </div>
+                                            <h6 class="card-title">DSLR Camera</h6>
+                                            <a href="/items/2" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } else { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-secondary bg-light">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">2 NFTs</span>
+                                            </div>
+                                            <h6 class="card-title text-muted">DSLR Camera</h6>
+                                            <p class="card-text small text-muted">Locked</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                            
+                            <% if(user.trustNFTs >= 3) { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-primary">3 NFTs</span>
+                                            </div>
+                                            <h6 class="card-title">Gaming Console</h6>
+                                            <a href="/items/3" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } else { %>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="card h-100 border-secondary bg-light">
+                                        <div class="card-body p-2 text-center">
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">3 NFTs</span>
+                                            </div>
+                                            <h6 class="card-title text-muted">Gaming Console</h6>
+                                            <p class="card-text small text-muted">Locked</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="/items" class="btn btn-outline-primary btn-sm w-100">Browse All Items</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-transparent">
+                <h5 class="mb-0">Your Rental History</h5>
+            </div>
+            <div class="card-body">
+                <% if(user.rentals.length > 0) { %>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Rental Date</th>
+                                    <th>Return Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% user.rentals.forEach(function(rental) { %>
+                                    <tr>
+                                        <td><%= rental.itemName %></td>
+                                        <td><%= rental.rentalDate %></td>
+                                        <td><%= rental.returnDate || 'Not returned' %></td>
+                                        <td>
+                                            <% if(rental.returned) { %>
+                                                <span class="badge bg-success">Returned</span>
+                                            <% } else { %>
+                                                <span class="badge bg-warning text-dark">Active</span>
+                                            <% } %>
+                                        </td>
+                                        <td>
+                                            <% if(!rental.returned) { %>
+                                                <button class="btn btn-sm btn-primary return-item" data-item-id="<%= rental.id %>">Return</button>
+                                            <% } else { %>
+                                                <span class="text-muted">Completed</span>
+                                            <% } %>
+                                        </td>
+                                    </tr>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                <% } else { %>
+                    <div class="alert alert-info">
+                        <p class="mb-0">You haven't rented any items yet. <a href="/items">Browse available items</a> to get started.</p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Return item button click handler
+        const returnButtons = document.querySelectorAll('.return-item');
+        returnButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const itemId = this.getAttribute('data-item-id');
+                
+                // This will be replaced with actual blockchain interaction
+                fetch(`/items/${itemId}/return`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        location.reload();
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while processing your request');
+                });
+            });
+        });
+    });
+</script>
+
+<%- include('../partials/footer') %>

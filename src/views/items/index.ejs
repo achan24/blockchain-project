@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            <p class="mb-0"><strong>Note:</strong> Items with higher trust requirements need more Trust NFTs to rent. Start with basic items to build your trust level!</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <% items.forEach(function(item) { %>
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="position-relative">
+                    <img src="<%= item.image %>" class="card-img-top" alt="<%= item.name %>">
+                    <div class="position-absolute top-0 end-0 bg-primary text-white px-2 py-1 m-2 rounded">
+                        <small>Trust: <%= item.trustRequired %> NFT<%= item.trustRequired !== 1 ? 's' : '' %></small>
+                    </div>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><%= item.name %></h5>
+                    <p class="card-text flex-grow-1"><%= item.description %></p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="badge <%= item.available ? 'bg-success' : 'bg-danger' %>">
+                            <%= item.available ? 'Available' : 'Rented' %>
+                        </span>
+                        <a href="/items/<%= item.id %>" class="btn btn-sm btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+<%- include('../partials/footer') %>
